@@ -7,7 +7,7 @@ const {
     registerTeacher, 
     getAllTeacher, 
     getTeacherById
-    } = require('./controller/mainFunctions');
+    } = require('../controller/index');
 
 /**
  * @swagger

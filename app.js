@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const teacherRoute = require('./teacher'); 
+const teacherRoute = require('./routes/teacher'); 
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUiExpress = require('swagger-ui-express');
@@ -20,7 +20,7 @@ const swaggerOptions = {
             }]
         }
     },
-    apis: ["./teacher.js"]
+    apis: ["./routes/teacher.js"]
 };
 
 
@@ -31,4 +31,4 @@ app.use(express.json());// for accepting json objects
 
 app.use('/teachers', teacherRoute);
 
-app.listen(5000);
+app.listen(7000);

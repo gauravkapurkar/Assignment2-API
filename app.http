@@ -1,10 +1,10 @@
-@hostname =  http://localhost:5000/teachers
+@hostname =  http://localhost:7000/teachers
 
 GET {{hostname}}
 
 ###
 
-GET {{hostname}}/1
+GET {{hostname}}/2
 
 ###
 
@@ -12,19 +12,19 @@ POST {{hostname}}/register
 Content-Type: application/json
 
 {   
-    "name": "gkk",
-    "password" : "1234567"
+    "name": "gaurav",
+    "password" : "12345678"
 }
 
 ###
 
-POST {{hostname}}/login/1
+POST {{hostname}}/login/2
 Content-Type: application/json
 
 
 {   
     "name": "gaurav",
-    "password" : "12345678"
+    "password" : "1234567"
 }
 
 ###

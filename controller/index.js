@@ -1,10 +1,11 @@
 const {readFileSync} = require('fs');
-const { writingData } = require('./dataWriting');
-const data = readFileSync('./teachers.json');
+const { writingData } = require('./file_db_storage/dataWriting');
+const basePath = '/home/gaurav/JS/api_creation'
+const data = readFileSync(`${basePath}/data/teachers.json`);
 const loadTeacher = JSON.parse(data);
 // console.log(loadTeacher);
-const {validateCourse} = require('./validation');
-const {getHashPassword, comparePassword} = require('./passwordHashed');
+const {validateCourse} = require('./utils/validation');
+const {getHashPassword, comparePassword} = require('./utils/passwordHashed');
 
 
 const getAllTeacher = (req, res) => {
